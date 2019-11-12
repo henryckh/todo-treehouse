@@ -5,7 +5,7 @@ using UnityEngine;
 public class ProgressionSystem : MonoBehaviour {
 
     int xp, level, energy;
-    Dictionary<string, int> MapActionPoint = new Dictionary<string, int>();
+    Dictionary<string, int> MapActionXP = new Dictionary<string, int>();
     Dictionary<string, int> MapActionEnergy = new Dictionary<string, int>();
     Dictionary<int, int> MapLevelXP = new Dictionary<int, int>();
 
@@ -15,10 +15,10 @@ public class ProgressionSystem : MonoBehaviour {
         energy = 0;
         level = 0;
 
-        MapActionPoint.Add("task_created", 5);
-        MapActionPoint.Add("task_finished", 15);
-        MapActionPoint.Add("streak_day_3", 30);
-        MapActionPoint.Add("streak_day_7", 75);
+        MapActionXP.Add("task_created", 5);
+        MapActionXP.Add("task_finished", 15);
+        MapActionXP.Add("streak_day_3", 30);
+        MapActionXP.Add("streak_day_7", 75);
 
         MapActionEnergy.Add("task_created", 1);
         MapActionEnergy.Add("task_finished", 3);
@@ -39,11 +39,11 @@ public class ProgressionSystem : MonoBehaviour {
 
     public void UpdateStats(string action) {
         UpdateXP(action);
+        UpdateEnergy(action);
         UpdateLevel();
-        UpdateEnergy();
     }
     public void UpdateXP(string action) {
-        xp += MapActionPoint.ContainsKey(action) ? MapActionPoint[action] : 0;
+        xp += MapActionXP.ContainsKey(action) ? MapActionXP[action] : 0;
     }
 
     public void UpdateLevel() {
@@ -58,7 +58,8 @@ public class ProgressionSystem : MonoBehaviour {
         level++;
     }
 
-    public void UpdateEnergy() {
+    public void UpdateEnergy(string action) {
+        energy += MapActionEnergy.ContainsKey(action) ? MapActionEnergy[action] : 0;
     }
 
     public int GetXP() {
