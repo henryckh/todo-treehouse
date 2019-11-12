@@ -5,9 +5,9 @@ using UnityEngine;
 public class ProgressionSystem : MonoBehaviour {
 
     int xp, level, energy;
-    Dictionary<string, int> MapActionXP = new Dictionary<string, int>();
-    Dictionary<string, int> MapActionEnergy = new Dictionary<string, int>();
-    Dictionary<int, int> MapLevelXP = new Dictionary<int, int>();
+    readonly Dictionary<string, int> MapActionXP = new Dictionary<string, int>();
+    readonly Dictionary<string, int> MapActionEnergy = new Dictionary<string, int>();
+    readonly Dictionary<int, int> MapLevelXP = new Dictionary<int, int>();
 
 
     public ProgressionSystem() {
