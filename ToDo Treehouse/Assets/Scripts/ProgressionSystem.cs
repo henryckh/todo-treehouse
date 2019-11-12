@@ -49,13 +49,10 @@ public class ProgressionSystem : MonoBehaviour {
     public void UpdateLevel() {
         // Never exceed beyond top level, which is 5.
         int nextLevel = (level + 1) < 5 ? level + 1 : 5;
-        int nextXP = MapLevelXP[nextLevel];
 
-        if (xp < nextXP) { // Do nothing
-            return;
+        if (MapLevelXP.ContainsKey(nextLevel) && (xp >= MapLevelXP[nextLevel])) {
+            level++;
         }
-
-        level++;
     }
 
     public void UpdateEnergy(string action) {
@@ -64,6 +61,12 @@ public class ProgressionSystem : MonoBehaviour {
 
     public int GetXP() {
         return xp;
+    }
+
+    public int GetXpToNextLevel() {
+        // Never exceed beyond top level, which is 5.
+        int nextLevel = (level + 1) < 5 ? level + 1 : 5;
+        return MapLevelXP.ContainsKey(nextLevel) ? MapLevelXP[nextLevel] : xp;
     }
 
     public int GetLevel() {
