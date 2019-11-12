@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="196px" height="64px" viewBox="0 0 196 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>Task/Add/ButtonSave</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="196" height="64"></rect>
+        <filter x="-1.0%" y="-3.1%" width="102.0%" height="106.2%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="1.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Create-New-Task" transform="translate(-586.000000, -383.000000)">
+            <g id="Task" transform="translate(373.000000, 143.000000)">
+                <g id="Body" transform="translate(21.000000, 19.000000)">
+                    <g id="Task/Add/ButtonSave" transform="translate(192.000000, 221.000000)">
+                        <g id="Rectangle">
+                            <use fill="#0091FF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                            <rect stroke="#000000" stroke-width="4" stroke-linejoin="square" x="2" y="2" width="192" height="60"></rect>
+                        </g>
+                        <text id="SAVE" font-family="RobotCrush, Robot Crush" font-size="48" font-weight="normal" fill="#FFFFFF">
+                            <tspan x="46.4375" y="42">SAVE</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
