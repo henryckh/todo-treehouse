@@ -19,4 +19,6 @@ public class Scoreboard : MonoBehaviour {
     public void UpdateEnergy(string energy) {
         GameObject.Find("Energy").GetComponent<Text>().text = energy;
     }
+
+    // UpdateStats(stats: Dictionary<string, int>): void
 }

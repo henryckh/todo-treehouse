@@ -63,7 +63,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Overlay.cs" />
     <Compile Include="Assets\Scripts\GameplayManager.cs" />
+    <Compile Include="Assets\Scripts\PopupNewTask.cs" />
     <Compile Include="Assets\Scripts\ProgressionSystem.cs" />
     <Compile Include="Assets\Scripts\Scoreboard.cs" />
     <Compile Include="Assets\Scripts\Tree.cs" />
@@ -72,6 +74,12 @@
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>/Users/Abhinay/GitHub/todo-treehouse/ToDo Treehouse/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VectorGraphics">
+      <HintPath>/Users/Abhinay/GitHub/todo-treehouse/ToDo Treehouse/Library/ScriptAssemblies/Unity.VectorGraphics.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InternalAPIEditorBridge.003">
+      <HintPath>/Users/Abhinay/GitHub/todo-treehouse/ToDo Treehouse/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.003.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>/Users/Abhinay/GitHub/todo-treehouse/ToDo Treehouse/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
@@ -88,18 +96,6 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>/Users/Abhinay/GitHub/todo-treehouse/ToDo Treehouse/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>/Users/Abhinay/GitHub/todo-treehouse/ToDo Treehouse/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>/Users/Abhinay/GitHub/todo-treehouse/ToDo Treehouse/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VectorGraphics">
-      <HintPath>/Users/Abhinay/GitHub/todo-treehouse/ToDo Treehouse/Library/ScriptAssemblies/Unity.VectorGraphics.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.InternalAPIEditorBridge.003">
-      <HintPath>/Users/Abhinay/GitHub/todo-treehouse/ToDo Treehouse/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.003.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.VectorGraphics.Editor">
       <HintPath>/Users/Abhinay/GitHub/todo-treehouse/ToDo Treehouse/Library/ScriptAssemblies/Unity.VectorGraphics.Editor.dll</HintPath>
     </Reference>
@@ -108,6 +104,12 @@
     </Reference>
     <Reference Include="Unity.InternalAPIEngineBridge.003">
       <HintPath>/Users/Abhinay/GitHub/todo-treehouse/ToDo Treehouse/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.003.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>/Users/Abhinay/GitHub/todo-treehouse/ToDo Treehouse/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>/Users/Abhinay/GitHub/todo-treehouse/ToDo Treehouse/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/2019.2.12f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
