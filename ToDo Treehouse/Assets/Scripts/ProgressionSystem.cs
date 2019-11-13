@@ -59,6 +59,10 @@ public class ProgressionSystem : MonoBehaviour {
         energy += MapActionEnergy.ContainsKey(action) ? MapActionEnergy[action] : 0;
     }
 
+    public Disctionary getStats() {
+
+    }
+
     public int GetXP() {
         return xp;
     }
