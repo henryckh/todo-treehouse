@@ -83,7 +83,7 @@ public class ProgressionSystem : MonoBehaviour {
 
     public int GetXpToNextLevel() {
         // Never exceed beyond top level, which is 4.
-        int nextLevel = (level + maxLevel) <  ? level + 1 : maxLevel;
+        int nextLevel = (level + 1) < maxLevel ? level + 1 : maxLevel;
         return MapLevelXP.ContainsKey(nextLevel) ? MapLevelXP[nextLevel] : xp;
     }
 
