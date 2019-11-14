@@ -1,19 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameplayManager : MonoBehaviour {
     public GameObject scoreboard;
     public GameObject popupNewTask;
 
-    int test = 0;
-
     void Start() {
-        Debug.LogFormat("Test var = {0}", test);
         scoreboard.GetComponent<Scoreboard>().UpdateXP(400, 700);
     }
 
-    public void OnClickCreateTask() {
-        popupNewTask.SetActive(true);
+    public void OnClickShowCreateTask() {
+        //popupNewTask.SetActive(true);
+        Instantiate(popupNewTask, new Vector3(0, 0, 0), Quaternion.identity);
+    }
+
+    public void CreateNewTask(string task) {
+        Debug.Log("Game Manager is creating...");
+        Debug.Log(task);
     }
 }

@@ -294,6 +294,7 @@
 /define:CSHARP_7_OR_LATER
 /define:CSHARP_7_3_OR_NEWER
 "Assets/Scripts/GameplayManager.cs"
+"Assets/Scripts/PopupNewTask.cs"
 "Assets/Scripts/ProgressionSystem.cs"
 "Assets/Scripts/Scoreboard.cs"
 "Assets/Scripts/Tree.cs"
