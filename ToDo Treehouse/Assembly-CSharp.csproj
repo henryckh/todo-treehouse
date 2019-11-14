@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\PopupNewTask.cs" />
     <Compile Include="Assets\Scripts\ProgressionSystem.cs" />
     <Compile Include="Assets\Scripts\Scoreboard.cs" />
+    <Compile Include="Assets\Scripts\Task.cs" />
     <Compile Include="Assets\Scripts\Tree.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/Abhinay/GitHub/todo-treehouse/ToDo Treehouse/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
