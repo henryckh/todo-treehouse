@@ -114,7 +114,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 344}
   m_MaxSize: {x: 12004, y: 8044}
   vertical: 0
-  controlID: 791
+  controlID: 96
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 344}
   m_MaxSize: {x: 8004, y: 8044}
   vertical: 1
-  controlID: 792
+  controlID: 97
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 222}
   m_MaxSize: {x: 8004, y: 4022}
   vertical: 0
-  controlID: 793
+  controlID: 98
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -237,8 +237,8 @@ MonoBehaviour:
     y: 563
     width: 1148
     height: 287
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 102, y: 122}
+  m_MaxSize: {x: 4002, y: 4022}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 15}
@@ -399,9 +399,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: aeeafcff
       m_LastClickedID: 0
-      m_ExpandedIDs: 9095ffffa695ffffa4c6ffff86cdffff80dfffff98e2ffffe2f2ffff6afbffff42310000
+      m_ExpandedIDs: d270ffff4877ffff987cffffc67cffffd67cffffe27cffffaccaffff6afbffff323100007431000096310000b4310000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -474,7 +474,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -545,20 +545,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Sprites/Button
+    - Assets/Resources
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Sprites/Button
+  - Assets/Resources
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/Abhinay/GitHub/todo-treehouse/ToDo Treehouse
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 24}
-    m_SelectedIDs: 2a300000
-    m_LastClickedID: 12330
-    m_ExpandedIDs: 00000000342d00002c2e0000262f0000622f000000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 182f0000
+    m_LastClickedID: 12056
+    m_ExpandedIDs: 00000000362d0000322e00002c2f0000682f000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -586,7 +586,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000342d0000262f000000ca9a3b
+    m_ExpandedIDs: 00000000362d00002c2f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -611,10 +611,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: a695ffff
-    m_LastClickedInstanceID: -27226
+    m_SelectedInstanceIDs: 743cfdff
+    m_LastClickedInstanceID: -181132
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000b4330000b62d000000000000
+    m_ExpandedInstanceIDs: c6230000b4330000b62d000000000000462f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

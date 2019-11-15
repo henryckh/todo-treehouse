@@ -10,7 +10,7 @@ public class GameplayManager : MonoBehaviour {
     public GameObject contentArea;
     public GameObject task;
 
-    string[] data = { "Task 1", "Task 2", "Task 3", "Task 4", "Task 5", "Task 6", "Task 7" };
+    string[] data = { "Task 1", "Task 2", "Task 3", "Task 4", "Task 5" };
 
     void Start() {
         scoreboard.GetComponent<Scoreboard>().UpdateXP(400, 700);
@@ -18,7 +18,6 @@ public class GameplayManager : MonoBehaviour {
     }
 
     public void OnClickShowCreateTask() {
-        //popupNewTask.SetActive(true);
         Instantiate(popupNewTask, new Vector3(0, 0, 0), Quaternion.identity);
     }
 
@@ -31,7 +30,6 @@ public class GameplayManager : MonoBehaviour {
         for (int i = 0; i < data.Length; i++) {
             Debug.Log(data[i]);
             GameObject prefab;
-            Transform tmp;
 
             float defaultY = -32.0f;
             float factorY = -80.0f;
@@ -39,9 +37,11 @@ public class GameplayManager : MonoBehaviour {
 
             Debug.Log(y);
             contentArea.GetComponent<RectTransform>().SetPositionAndRotation(Vector3.zero, Quaternion.identity);
+
             // Instantiate task prefab and attach it to 'content' area (game object) of 'ScrollPane' UI component
             prefab = Instantiate(task) as GameObject;
             prefab.transform.SetParent(contentArea.transform, false);
+
             //prefab.transform.position = contentArea.transform.position;
             prefab.GetComponent<RectTransform>().anchorMin = new Vector2(1, 1);
             prefab.GetComponent<RectTransform>().anchorMax = new Vector2(1, 1);
