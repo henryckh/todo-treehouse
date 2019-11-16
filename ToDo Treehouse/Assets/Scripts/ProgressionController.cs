@@ -12,6 +12,8 @@ public class ProgressionController : MonoBehaviour {
     readonly Dictionary<int, int> MapLevelXP = new Dictionary<int, int>();
     readonly Dictionary<int, string> MapLevelTreePrefab = new Dictionary<int, string>();
 
+    public GameObject scoreboardController;
+
     public ProgressionController() {
         xp = 0;
         energy = 0;
@@ -39,6 +41,10 @@ public class ProgressionController : MonoBehaviour {
         MapLevelTreePrefab.Add(2, "Level_2.png");
         MapLevelTreePrefab.Add(3, "Level_3.png");
         MapLevelTreePrefab.Add(4, "Level_4.png");
+    }
+
+    void Start() {
+        scoreboardController.GetComponent<ScoreboardController>().UpdateScoreboard(GetStats());
     }
 
     void UpdateXP(string action) {
@@ -76,15 +82,11 @@ public class ProgressionController : MonoBehaviour {
         return energy;
     }
 
-    void renderTree() {
-
-    }
-
     public void UpdateStats(string action) {
         UpdateXP(action);
         UpdateEnergy(action);
         UpdateLevel();
-        Debug.LogFormat("XP: {0}\nNext XP: {1}\nLevel: {2}\nEnergy: {3}", GetXP(), GetXpToNextLevel(), GetLevel(), GetEnergy());
+        scoreboardController.GetComponent<ScoreboardController>().UpdateScoreboard(GetStats());
     }
 
     public Dictionary<string, int> GetStats() {
