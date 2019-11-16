@@ -10,18 +10,18 @@ public class ProgressionController : MonoBehaviour {
     readonly Dictionary<string, int> MapActionXP = new Dictionary<string, int>();
     readonly Dictionary<string, int> MapActionEnergy = new Dictionary<string, int>();
     readonly Dictionary<int, int> MapLevelXP = new Dictionary<int, int>();
-    readonly Dictionary<int, string> MapLevelTreePrefab = new Dictionary<int, string>();
 
     public GameObject scoreboardController;
+    public GameObject treeController;
 
     public ProgressionController() {
         xp = 0;
         energy = 0;
         level = 0;
-        maxLevel = 4;
+        maxLevel = 6;
 
         MapActionXP.Add("task_created", 5);
-        MapActionXP.Add("task_finished", 10);
+        MapActionXP.Add("task_finished", 100);
         MapActionXP.Add("streak_day_3", 15);
         MapActionXP.Add("streak_day_7", 20);
 
@@ -35,16 +35,15 @@ public class ProgressionController : MonoBehaviour {
         MapLevelXP.Add(2, 150);
         MapLevelXP.Add(3, 350);
         MapLevelXP.Add(4, 750);
-
-        MapLevelTreePrefab.Add(0, "Level_0.png");
-        MapLevelTreePrefab.Add(1, "Level_1.png");
-        MapLevelTreePrefab.Add(2, "Level_2.png");
-        MapLevelTreePrefab.Add(3, "Level_3.png");
-        MapLevelTreePrefab.Add(4, "Level_4.png");
+        MapLevelXP.Add(5, 1500);
+        MapLevelXP.Add(6, 5000);
     }
 
     void Start() {
-        scoreboardController.GetComponent<ScoreboardController>().UpdateScoreboard(GetStats());
+        Dictionary<string, int> stats = GetStats();
+
+        scoreboardController.GetComponent<ScoreboardController>().UpdateScoreboard(stats);
+        treeController.GetComponent<TreeController>().UpgradeTreeToLevel(stats["level"]);
     }
 
     void UpdateXP(string action) {
@@ -75,27 +74,31 @@ public class ProgressionController : MonoBehaviour {
     }
 
     int GetLevel() {
-        return level;
+        return level < maxLevel ? level : maxLevel;
     }
 
     int GetEnergy() {
         return energy;
     }
 
-    public void UpdateStats(string action) {
+    public void UpdateProgress(string action) {
+        Dictionary<string, int> stats = GetStats();
+
         UpdateXP(action);
         UpdateEnergy(action);
         UpdateLevel();
-        scoreboardController.GetComponent<ScoreboardController>().UpdateScoreboard(GetStats());
+
+        scoreboardController.GetComponent<ScoreboardController>().UpdateScoreboard(stats);
+        treeController.GetComponent<TreeController>().UpgradeTreeToLevel(stats["level"]);
     }
 
     public Dictionary<string, int> GetStats() {
-        Dictionary<string, int> stats = new Dictionary<string, int>();
-
-        stats.Add("xp", GetXP());
-        stats.Add("next_xp", GetXpToNextLevel());
-        stats.Add("level", GetLevel());
-        stats.Add("energy", GetEnergy());
+        Dictionary<string, int> stats = new Dictionary<string, int> {
+            { "xp", GetXP() },
+            { "next_xp", GetXpToNextLevel() },
+            { "level", GetLevel() },
+            { "energy", GetEnergy() }
+        };
 
         return stats;
     }

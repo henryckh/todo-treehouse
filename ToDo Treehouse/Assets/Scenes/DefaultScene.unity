@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 118484468}
   - component: {fileID: 118484469}
   m_Layer: 0
-  m_Name: Tree
+  m_Name: TreeWrapper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -581,7 +581,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1000010061563708, guid: 666ec3b7bb72c254495bd598576ab332, type: 3}
       propertyPath: m_Name
-      value: TreeLevelXX
+      value: Tree
       objectReference: {fileID: 0}
     - target: {fileID: 4000014180385860, guid: 666ec3b7bb72c254495bd598576ab332, type: 3}
       propertyPath: m_LocalPosition.x
@@ -736,7 +736,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
   m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 20, z: -80}
+  m_LocalPosition: {x: 15, y: 55, z: -100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 747445787}
@@ -896,7 +896,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.0000015449588}
+  m_AnchoredPosition: {x: 0, y: 75.516754}
   m_SizeDelta: {x: 0, y: 920}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1052372916
@@ -1087,6 +1087,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreboardController: {fileID: 138974542}
+  treeController: {fileID: 1846613946}
 --- !u!4 &1606397441
 Transform:
   m_ObjectHideFlags: 0
@@ -1303,6 +1304,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1747990800}
   m_CullTransparentMesh: 0
+--- !u!1 &1833523997 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000010061563708, guid: 666ec3b7bb72c254495bd598576ab332,
+    type: 3}
+  m_PrefabInstance: {fileID: 643771475}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1846613946
 GameObject:
   m_ObjectHideFlags: 0
@@ -1332,6 +1339,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c90d0e3b77c95493cb848e2b0b5a4006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trees:
+  - {fileID: 100000, guid: 5400807e802a1de4e9b295c5fa13ec0c, type: 3}
+  - {fileID: 100000, guid: 7c52fc93cb9e73542af4526e8605f63e, type: 3}
+  - {fileID: 100000, guid: 53febd467b8f55a4cbbe1ab4244da4fc, type: 3}
+  - {fileID: 100000, guid: 19f53529515092141b8f72421798053d, type: 3}
+  - {fileID: 100000, guid: 66a509b29a0f1ba43bb4a16ce83ee121, type: 3}
+  - {fileID: 100000, guid: 9d811b3b2f2dc534e8a0d0f95004d72b, type: 3}
+  - {fileID: 100000, guid: baad675dd45f5ac4e8491c9a916fd86b, type: 3}
+  scaleFactor:
+  - 0.4
+  - 6
+  - 1
+  - 22
+  - 1
+  - 21
+  - 9
+  tree: {fileID: 1833523997}
 --- !u!4 &1846613948
 Transform:
   m_ObjectHideFlags: 0
@@ -1508,7 +1532,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 280912142}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.999991
+  m_Size: 0.63850564
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

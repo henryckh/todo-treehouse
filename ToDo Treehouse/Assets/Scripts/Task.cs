@@ -14,6 +14,6 @@ public class Task : MonoBehaviour {
     public void OnTaskStatusChange() {
         bool status = toggle.GetComponent<Toggle>().isOn;
         string command = status ? "task_finished" : "task_unfinished";
-        progressionController.GetComponent<ProgressionController>().UpdateStats(command);
+        progressionController.GetComponent<ProgressionController>().UpdateProgress(command);
     }
 }
