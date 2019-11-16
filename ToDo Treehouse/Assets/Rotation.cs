@@ -4,26 +4,42 @@ using UnityEngine;
 
 public class Rotation : MonoBehaviour {
 
-    public float rotateSpeed = 500.0f;
-    public GameObject cube;
+    private Vector3 moveDirection;
+    private Vector3 targetFlyRotation;
 
-    private void Start() {
-        Debug.Log(cube);
-    }
+    void Update() {
+        float yawMouse = Input.GetAxis("Mouse X");
+        float pitchMouse = Input.GetAxis("Mouse Y");
 
-    private void Rotate() {
-        float rotateX = Input.GetAxis("Mouse X") * rotateSpeed * Mathf.Deg2Rad;
-        float rotateY = Input.GetAxis("Mouse Y") * rotateSpeed * Mathf.Deg2Rad;
+        targetFlyRotation = Vector3.zero;
 
-        cube.transform.Rotate(Vector3.up, -rotateX);
-        cube.transform.Rotate(Vector3.right, rotateY);
-    }
+        if (Mathf.Abs(yawMouse) > 0.1f || Mathf.Abs(pitchMouse) > 0.1f) {
+            targetFlyRotation = yawMouse * transform.right + pitchMouse * transform.up;
+            Vector3.zero.Normalize();
+            targetFlyRotation *= Time.deltaTime * 3.0f;
 
-    private void OnMouseOver() {
-        Rotate();
-    }
+            //limit x rotation if looking too much up or down
+            //Log out the limitX value for this to make sense
 
-    private void OnMouseDrag() {
-        Rotate();
+            Debug.LogFormat("1. Target Fly Rotation: {0}", targetFlyRotation);
+            Debug.LogFormat("1. Move Direction: {0}", moveDirection);
+            float limitX = Quaternion.LookRotation(moveDirection + targetFlyRotation).eulerAngles.x;
+
+            //70 sets the rotation limit in the down direction
+            //290 sets limit for up direction
+            if ((limitX < 90 && limitX > 70) || (limitX > 270 && limitX < 290)) {
+                Debug.Log("restrict motion");
+            }
+            else {
+                Debug.LogFormat("2. Target Fly Rotation: {0}", targetFlyRotation);
+                Debug.LogFormat("2. Move Direction: {0}", moveDirection);
+
+                moveDirection += targetFlyRotation;
+                //does the actual rotation on the object if no limits are breached
+                transform.rotation = Quaternion.LookRotation(moveDirection);
+            }
+
+        }
     }
 }
+
