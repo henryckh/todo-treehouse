@@ -23,7 +23,7 @@ public class TaskController : MonoBehaviour {
             Debug.Log(data[i]);
             GameObject prefab;
 
-            float defaultY = -64.0f;
+            float defaultY = -24.0f;
             float factorY = -56.0f;
             float y = (defaultY + (i * factorY)); // Y Co-ordinate of each subsequent task
 
