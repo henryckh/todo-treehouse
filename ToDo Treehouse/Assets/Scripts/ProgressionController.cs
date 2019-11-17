@@ -20,10 +20,10 @@ public class ProgressionController : MonoBehaviour {
         level = 0;
         maxLevel = 6;
 
-        MapActionXP.Add("task_created", 5);
-        MapActionXP.Add("task_finished", 100);
-        MapActionXP.Add("streak_day_3", 15);
-        MapActionXP.Add("streak_day_7", 20);
+        MapActionXP.Add("task_created", 4);
+        MapActionXP.Add("task_finished", 7);
+        MapActionXP.Add("streak_day_3", 25);
+        MapActionXP.Add("streak_day_7", 80);
 
         MapActionEnergy.Add("task_created", 1);
         MapActionEnergy.Add("task_finished", 3);
@@ -41,8 +41,6 @@ public class ProgressionController : MonoBehaviour {
 
     void Start() {
         Dictionary<string, int> stats = GetStats();
-
-        scoreboardController.GetComponent<ScoreboardController>().UpdateScoreboard(stats);
         treeController.GetComponent<TreeController>().UpgradeTreeToLevel(stats["level"]);
     }
 
@@ -88,13 +86,13 @@ public class ProgressionController : MonoBehaviour {
         UpdateEnergy(action);
         UpdateLevel();
 
-        scoreboardController.GetComponent<ScoreboardController>().UpdateScoreboard(stats);
         treeController.GetComponent<TreeController>().UpgradeTreeToLevel(stats["level"]);
     }
 
     public Dictionary<string, int> GetStats() {
         Dictionary<string, int> stats = new Dictionary<string, int> {
             { "xp", GetXP() },
+            { "base_xp", MapLevelXP[level] },
             { "next_xp", GetXpToNextLevel() },
             { "level", GetLevel() },
             { "energy", GetEnergy() }
