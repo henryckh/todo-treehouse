@@ -7,7 +7,6 @@ Gamification of your daily to-do list. Works in 3 simple steps:
 
 ---
 ![image](https://i.imgur.com/zIFWlZd.png)
----
 
 ## Future checklist
 
