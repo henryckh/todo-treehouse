@@ -50,7 +50,7 @@ public class TaskController : MonoBehaviour {
             prefab.GetComponent<RectTransform>().pivot = new Vector2(1, 1);
             prefab.GetComponent<RectTransform>().sizeDelta = new Vector2(800.0f, 40.0f);
             prefab.GetComponent<RectTransform>().position = new Vector3(0.0f, y, 0.0f);
-            prefab.GetComponent<RectTransform>().localPosition = new Vector3(0.0f, y, 0.0f);
+            prefab.GetComponent<RectTransform>().anchoredPosition = new Vector3(0.0f, y, 0.0f);
         }
     }
 

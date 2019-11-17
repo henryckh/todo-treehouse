@@ -27,6 +27,7 @@ public class Rotation : MonoBehaviour {
             if ((limitX < 90 && limitX > 70) || (limitX > 270 && limitX < 290)) {
                 Debug.Log("restrict motion");
             }
+
             else {
                 moveDirection += targetFlyRotation;
                 //does the actual rotation on the object if no limits are breached
