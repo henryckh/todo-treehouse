@@ -10,7 +10,7 @@ Gamification of your daily to-do list. Works in 3 simple steps:
 
 ## Future checklist
 
-- Detailed charcater (tree) progression system similar to RPG(s).
+- Detailed character progression system similar to RPG(s).
 - Craftshop to craft cool cosmetics for tree. Requires energy gained from the tasks completed.
 - Due date and reminder functionalities for tasks.
 - Ability to build treehouses and separate progression system for it.
