@@ -20,15 +20,12 @@ public class TaskController : MonoBehaviour {
 
     void RenderTasks() {
         for (int i = 0; i < data.Length; i++) {
-            Debug.Log(data[i]);
             GameObject prefab;
 
             float defaultY = -24.0f;
             float factorY = -56.0f;
             float y = (defaultY + (i * factorY)); // Y Co-ordinate of each subsequent task
 
-            Debug.Log(y);
-            Debug.Log(contentAreaTasks);
             contentAreaTasks.GetComponent<RectTransform>().SetPositionAndRotation(Vector3.zero, Quaternion.identity);
 
             // Instantiate task prefab and attach it to 'content' area (game object) of 'ScrollPane' UI component
@@ -45,5 +42,9 @@ public class TaskController : MonoBehaviour {
             // Render prefab content:
             prefab.transform.Find("Text").GetComponent<Text>().text = data[i];
         }
+    }
+
+    public void CreateTask() {
+        Debug.Log("Creating Task...");
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TreeController : MonoBehaviour {
     public GameObject[] trees = new GameObject[7];
-    public float[] scaleFactor = { 0.4f, 6.0f, 1.0f, 22.0f, 1.0f, 21.0f, 9.0f };
+    public float[] scaleFactor = { 0.4f, 6.0f, 1.0f, 22.0f, 1.0f, 19.0f, 8.0f };
     public GameObject tree;
     private Mesh meshToSwap;
 
